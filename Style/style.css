@@ -1,0 +1,319 @@
+/* ******** */
+/* Générale */
+/* ******** */
+
+html, body, /* div, */ span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6,/*  p, */ blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+/* b, u, i, */ center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    width: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/* ol, ul {
+    list-style: none;
+    width: 100%;
+} */
+blockquote, q {
+    quotes: none;
+    width: 100%;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url("./Polices/Roboto.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Roboto_italic";
+    src: url("./Polices/Roboto_italic.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Roboto_Bold";
+    src: url("./Polices/Roboto_Regular.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Roboto_BoldItalic";
+    src: url("./Polices/Roboto_Regularitalic.ttf") format("truetype");
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 2vh;
+    font-family: Roboto;
+    line-height: 2.5vh;
+}
+
+main{
+    margin: 20vh 10vw 0 25vw;
+    width: 100%;
+}
+
+.site{
+    /* Agencement Nav Contenue */
+    display: flex;
+}
+
+/* *** */
+/* Nav */
+/* *** */
+
+nav{
+    padding: 2vh 2vw;
+    width: 40vh;
+    position: fixed;
+}
+
+.Log{
+    /* Placement du lien connexion */
+    position: absolute;
+    bottom: -3vh
+}
+
+.logo:hover{
+    border-left: none;
+}
+
+.logo_img{
+    margin: 0 0 3vh 0;
+    width: 39vh;
+}
+
+h6{
+    /* Categorie de nav */
+    padding: 2vh 0 1vh 0;
+    color: #D75A16;
+    font-size: 3vh;
+}
+
+a{
+    font-size: 2vh;
+    color: black;
+}
+
+h6 a{
+    font-size: 3vh;
+    color: black;
+}
+
+a:hover{
+    border-left: 10px solid #D75A16;
+}
+
+.perdu_trouve{
+    color: red;
+}
+
+/* ********************** */
+/* Page contenant article */
+/* ********************** */
+
+article{
+    border-bottom: 1vh solid #D75A16;
+    margin-bottom: 6vh;
+}
+
+h2{
+    font-size: 4vh;
+    width: 50%;
+}
+
+hr{
+    width: 50%;
+    height: 0.5vh;
+    background-color: #5693AD;
+    margin-left: 0;
+    border: none;
+}
+
+p{
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+
+.gauche{
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+}
+
+.droite{
+text-align: right;
+}
+
+/* ************************** */
+/* Page Connexion/Inscription */
+/* ************************** */
+
+fieldset{
+    border: 0.1vw solid #5693AD;
+    padding: 0.5vw;
+    margin: 2vw 0 1vw 3vw;
+}
+
+legend{
+    padding: 0 0.5vw;
+    width: auto;
+}
+
+label{
+    width: 18vw;
+    display: inline-block;
+    text-align: right;
+}
+
+input{
+    width: 15vw;
+}
+
+form .erreur{
+    color: red;
+}
+
+input[type="submit"]{
+    font-style: Roboto_Bold;
+    font-size: 2vh;
+    color: white;
+    text-align: center;
+    width: 10vw;
+    height: 2vw;
+    margin: 0 auto;
+    display: block;
+    border: 0.2vw solid #D75A16;
+    background-color: #D75A16;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+input[type="submit"]:hover{
+    background-color: #5693AD;
+    border-radius: 2vw;
+}
+
+
+/* ************* */
+/* Chat pt liste */
+/* ************* */
+
+.ajout_chat_pt{
+    position: absolute;
+    top: 2vh;
+    left: 85vw;
+    width: auto;
+}
+
+.chat_pt{
+    display: flex;
+}
+
+.chat_pt img{
+    width: 60%;
+}
+
+.perdu a:hover{
+    border: none;
+}
+
+.trouve{
+    background-image: url('../Images/_texte_trouve.png');
+    background-repeat: no-repeat;
+    background-position:left 10vw bottom 50%;
+    background-size: 47%;
+    z-index: 1;
+}
+
+
+/* Chat perdu */
+
+.commentaire{
+    padding-left: 10%;
+    width: unset;
+}
+
+.commentaire p{
+    border-bottom: 0.1vh solid #D75A16;
+    border-bottom-width: 20%;
+}
+
+label.contenu_com{
+    vertical-align: top;
+    width: 10vw;
+}
+
+fieldset.com{
+    width: 94%;
+}
+
+
+/* ******* */
+/* Editeur */
+/* ******* */
+
+.wysibb{
+    margin: 30px;
+    width: 60vw;
+}
+
+.wysibb *{
+    width: unset;
+}
+
+
+/* *********** */
+/* Page Images */
+/* *********** */
+
+
+.page_img{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+.liste_img{
+    height: 200px;
+    width: auto;
+    margin: 3px;
+}
